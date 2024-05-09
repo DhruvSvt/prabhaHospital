@@ -1,0 +1,15 @@
+.piles-cause{
+    height: 130px;
+    width: 125px;
+    border-radius: 50%;
+}
+
+.cause-caption{
+    font-family: 'Raleway', sans-serif;
+    font-size: 21px;
+}
+
+.carousel-resize {
+    height: 75vh;
+    width: 100vw;
+}
