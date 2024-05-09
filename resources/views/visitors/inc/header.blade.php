@@ -47,7 +47,7 @@
                     </div>
                     <div class="header-info-box">
                         <div class="header-info-icon"><i class="icofont icofont-doctor"></i></div>
-                        <p><a href="{{ route('contact') }}">24x7 Emergency & Trauma Care</p>
+                        <p><a href="{{ route('contact') }}">24x7 Emergency <br> Trauma Care</p>
                         {{-- <h6><a href="tel:">+91 90125 16000</h6> --}}
                     </div>
                     <div class="header-info-box">

@@ -1,15 +1,15 @@
 @extends('visitors.layouts.visitorsApp',['title' => 'Contact'])
 @section('content')
 <section class="section-padding bg-color">
-    <div class="auto-container mt-1 mb-2 text-center">
+    <div class="auto-container mt-1 mb-1 text-center">
         <h1 class="heading">Contact us</h1>
     </div>
 </section>
 <!-- GOOGLE MAP -->
-
+<br>
 <div class="gmap_canvas">
 
-    <iframe id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764.7766731303784!2d77.9581455325609!3d27.212254334683532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397477c8b35d9d13%3A0xb5a9779d87ba7595!2sPrabha%20hospital%20and%20Trauma%20Center!5e0!3m2!1sen!2sin!4v1654162025212!5m2!1sen!2sin"></iframe>
+    <iframe id="gmap_canvas" style="margin-top: 10px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764.7766731303784!2d77.9581455325609!3d27.212254334683532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397477c8b35d9d13%3A0xb5a9779d87ba7595!2sPrabha%20hospital%20and%20Trauma%20Center!5e0!3m2!1sen!2sin!4v1654162025212!5m2!1sen!2sin"></iframe>
 </div>
 <!-- END GOOGLE MAP -->
 
