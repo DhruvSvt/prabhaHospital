@@ -71,6 +71,8 @@ Route::view('/liposuction', 'visitors.liposuction')->name('liposuction');
 Route::view('/orthopedics', 'visitors.orthopedics')->name('orthopedics');
 Route::view('/ourdoctors', 'visitors.ourdoctors')->name('ourdoctors');
 Route::view('/patients-feedback', 'visitors.patientfeedback')->name('patients-feedback');
+Route::view('/blogs', 'visitors.blogs')->name('blogs');
+Route::view('/doctors-appointment','visitors.doctors-appointment')->name('doctors-appointment');
 
 
 

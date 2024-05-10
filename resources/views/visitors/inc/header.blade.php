@@ -86,7 +86,7 @@
                                     <a href="{{ config('app.url') }}/service/departments" class="nav-link">Doctors</a>
                                     <ul class="dropdown-menu">
                                         <li><a href="{{ route('ourdoctors') }}">Our Doctors</a></li>
-                                        <li><a href="{{ route('urology') }}">Doctors Appointment</a></li>
+                                        <li><a href="{{ route('doctors-appointment') }}">Doctors Appointment</a></li>
                                         {{-- <li><a href="{{ route('gastroenterology') }}">Protect from COVID-19</a></li> --}}
                                         </ul>
                                 </li>
@@ -123,6 +123,7 @@
                                 &nbsp;
 
                                 <li><a href="{{ route('contact') }}" class="nav-link">Contact</a></li>
+                                <li><a href="{{ route('blogs') }}" class="nav-link">Blogs</a></li>
                                 {{-- <li><a href="#" class="nav-link">FAQ</a></li> --}}
 
 
@@ -155,7 +156,7 @@
                                         <li><a href="{{ route('about-doctor') }}" class="nav-link">About Doctors</a></li>
                                         <li><a href="{{ route('director-desk') }}" class="nav-link">Director's Desk</a></li>
                                 <li><a href="{{ route('our-surgeries') }}" class="nav-link">Our Surgeries</a></li>
-                                <li><a href="{{ config('app.url') }}/service/international-patient" class="nav-link">International patients</a></li>
+                                {{-- <li><a href="{{ config('app.url') }}/service/international-patient" class="nav-link">International patients</a></li> --}}
                                 <li><a href="{{ config('app.url') }}" class="nav-link">Facilities</a></li>
                                 <li><a href="{{ config('app.url') }}/contact" class="nav-link">Contact</a></li>
                                 {{-- <li><a href="{{ config('app.url') }}/gallery" class="nav-link">Gallery</a></li> --}}

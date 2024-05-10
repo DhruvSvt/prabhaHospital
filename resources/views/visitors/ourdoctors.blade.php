@@ -213,7 +213,7 @@
                         </div>
                         <!-- Team Details-->
                         <div class="single_advisor_details_info">
-                            <h6>Jitendra Srivastava</h6>
+                            <h6>Dr. Jitendra Srivastava</h6>
                             <p class="designation"></p>
                         </div>
                     </div>
