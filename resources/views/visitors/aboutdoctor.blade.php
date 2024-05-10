@@ -11,7 +11,7 @@
             <!--<img src="assets/img/157A7094.jpg" style="height:80%; width:80%; border-radius: 12px">-->
             <div class="mt-4">
                 <h3><span></span></h3>
-                <hr> </div>
+                 </div>
         </div>
     </div>
 </section>
@@ -39,7 +39,7 @@
                 </div>
                 <!-- Team Details-->
                 <div class="single_advisor_details_info">
-                    <h6>Dr. Priyank Singh</h6>
+                    <h6>Dr. Priyank Kumar Singh</h6>
                     <p class="designation"></p>
                 </div>
             </div>

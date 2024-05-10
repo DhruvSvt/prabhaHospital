@@ -1,5 +1,10 @@
 @extends('visitors.layouts.visitorsApp',['title' => 'Icu'])
 @section('content')
+<section class="section-padding bg-color">
+    <div class="auto-container mt-2 mb-2 text-center">
+        <h1 class="heading">ICU</h1>
+    </div>
+</section>
 <section class="section-padding">
     <div class="auto-container mt-5 mb-5">
         <div class="row">

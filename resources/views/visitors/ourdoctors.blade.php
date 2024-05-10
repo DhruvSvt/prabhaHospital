@@ -14,7 +14,7 @@
             <!--<img src="assets/img/157A7094.jpg" style="height:80%; width:80%; border-radius: 12px">-->
             <div class="mt-4">
                 <h3><span></span></h3>
-                <hr>
+               
             </div>
         </div>
     </div>
@@ -45,8 +45,8 @@
                         </div>
                         <!-- Team Details-->
                         <div class="single_advisor_details_info">
-                            <h6>Dr. Priyank Singh</h6>
-                            <p class="designation"></p>
+                            <h6>Dr. Priyank Kumar Singh</h6>
+                            <p class="designation">Critical Care (MD,MBBS)</p>
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                         <!-- Team Details-->
                         <div class="single_advisor_details_info">
                             <h6>Dr. Kartikey Sharma</h6>
-                            <p class="designation"></p>
+                            <p class="designation">Orthopedic (MS)</p>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
                         <!-- Team Details-->
                         <div class="single_advisor_details_info">
                             <h6>Dr. Shalini Sharma</h6>
-                            <p class="designation"></p>
+                            <p class="designation">MBBS,MD & DM Gastrology</p>
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                         <!-- Team Details-->
                         <div class="single_advisor_details_info">
                             <h6>Dr. S.K. Gupta</h6>
-                            <p class="designation"></p>
+                            <p class="designation">Neuro Surgeon (M.ch)</p>
                         </div>
                     </div>
                 </div>
@@ -266,5 +266,6 @@
                 </div>
             </div>
         </div>
+
     </section>
 @endsection

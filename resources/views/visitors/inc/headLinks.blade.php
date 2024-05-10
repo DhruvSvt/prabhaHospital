@@ -15,7 +15,7 @@
 
 <link rel="stylesheet" href="{{ config('app.url') }}/assets/venobox/css/venobox.css" />
 <link rel="stylesheet" href="{{ config('app.url') }}/assets/css/cards.css" />
-<link rel="stylesheet" href="{{ config('app.url') }}/assets/bootstrap" />
+
 <!-- Style CSS -->
 <link rel="stylesheet" href="{{ config('app.url') }}/assets/css/style.css?v=1712303806">
 <!-- Responsive  CSS -->
@@ -29,7 +29,14 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <style>
-    body, h1, h2, h3, h4, h5, h6{
-        font-family: 'Poppins', sans-serif; !important
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Poppins', sans-serif;
+         !important
     }
 </style>

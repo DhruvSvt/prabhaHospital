@@ -116,7 +116,7 @@
         <div class="row">
             <div
                 class="col-lg-7 col-sm-12 col-12 pr-lg-5 pr-md-5 pr-sm-0 pr-0 mb-lg-0 mb-md-0 mb-sm-5 mb-5 about-us-into">
-                <p>WHO WE ARE</p>
+                <p class="text-center" style="font-size: 30px; margin-bottom:35px;">WHO WE ARE</p>
                 <h4 class="mt-1">Why Choose <br>Prabha Healthcare?</h4>
 
                 <p>Prabha Hospital And Trauma Centre( A Unit Of MLP Advance Healthcare Systems Pvt. Ltd.) in no time
@@ -251,12 +251,15 @@
                 </div>
 
             </div>
+            <a href="{{ route('facilities') }}" class="blog-home-rmbtn m-2">View all <i
+                    class="icofont icofont-long-arrow-right"></i></a>
         </div>
         <p style="background: #efefef; margin-top: 29px; padding: 4px;">
             <i class="icofont icofont-tick-mark"></i> Besides above, we have separate burn unit, trauma unit, and
             gastro & renal unit to meet such specific emergencies by
             the concerned super specialists, once the emergency department screened the patient.</p>
     </div>
+
     <!--- END CONTAINER -->
 </section>
 

@@ -12,7 +12,7 @@
                 <!--<img src="assets/img/157A7094.jpg" style="height:80%; width:80%; border-radius: 12px">-->
                 <div class="mt-1">
                     <h3><span>Book Your Appointment</span></h3>
-                    <h4 class="text-center"  style="color: red; font-size: 17px; margin-top: 15px;" >Please don't book any doctor's appointments  SUNDAY</h4>
+                    <h4 class="text-center"  style="color: red; font-size: 17px; margin-top: 15px;" >Please don't book any doctor's appointments on SUNDAY</h4>
                     <hr>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                         <label for="lname">City</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="phone" name="city" required placeholder="Your city..">
+                        <input type="text" id="city" name="city" required placeholder="Your city..">
                     </div>
                 </div>
                 <div class="row">
