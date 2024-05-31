@@ -7,8 +7,10 @@
                     <div class="header-social m-0">
                         <ul>
                             <li><a href="#0">Follow Us:</a></li>
-                           <li><a href="https://www.facebook.com/Prabha.nh2"><i class="icofont icofont-social-facebook"></i></a></li>
-                           <li><a href="https://www.instagram.com/prabha_hospital/?hl=en"><i class="icofont icofont-social-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/Prabha.nh2"><i
+                                        class="icofont icofont-social-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/prabha_hospital/?hl=en"><i
+                                        class="icofont icofont-social-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -34,14 +36,15 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-7 ">
                     <div class="logo mb-0">
                         <a href="{{ route('home') }}">
-                           <img class="img-fluid1" src="{{ config('app.url') }}/assets/img/logo/logo.png" alt="Prabha Hospital">
+                            <img class="img-fluid1" src="{{ config('app.url') }}/assets/img/logo/logo.png"
+                                alt="Prabha Hospital">
                         </a>
                     </div>
                 </div>
                 <!-- end col -->
                 <div class="col-lg-9 col-md-12 col-sm-12 col-12 d-lg-block d-md-none d-sm-none d-none ">
                     <div class="header-info-box">
-                       <div class="header-info-icon"><i class="icofont icofont-van"></i></div>
+                        <div class="header-info-icon"><i class="icofont icofont-van"></i></div>
                         <p>Emergency number</p>
                         <h6>+91 72520 00343</h6>
                     </div>
@@ -87,34 +90,37 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="{{ route('ourdoctors') }}">Our Doctors</a></li>
                                         <li><a href="{{ route('doctors-appointment') }}">Doctors Appointment</a></li>
-                                        {{-- <li><a href="{{ route('gastroenterology') }}">Protect from COVID-19</a></li> --}}
-                                        </ul>
+                                        {{-- <li><a href="{{ route('gastroenterology') }}">Protect from COVID-19</a>
+                                        </li> --}}
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href="{{ route('our-surgeries') }}" class="nav-link">Our Surgeries</a>
 
 
                                 </li>
-                                {{-- <li><a href="{{ route('patients') }}" class="nav-link">International patients</a></li> --}}
+                                {{-- <li><a href="{{ route('patients') }}" class="nav-link">International patients</a>
+                                </li> --}}
                                 <li>
                                     <a href="{{ route('facilities') }}" class="nav-link">Facilities</a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="{{ config('app.url') }}/service/departments" class="nav-link">Departments</a>
+                                    <a href="#0" class="nav-link">Departments</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="{{ route('neurology') }}">Neurology</a></li>
-                                        <li><a href="{{ route('urology') }}">Urology</a></li>
-                                        <li><a href="{{ route('gastroenterology') }}">Gastroenterology</a></li>
-                                        <li><a href="{{ route('obstetrics and gynecology') }}">Obstetrics and Gynecology</a></li>
-                                        <li><a href="{{ route('icu') }}">ICU</a></li>
-                                        <li><a href="{{ route('nicu') }}">NICU</a></li>
-                                        <li><a href="{{ route('surgery') }}">Surgery Department</a></li>
-                                        <li><a href="#">Gastrointestinal Surgery</a></li>
-                                        <li><a href="#">Pharmacy Services</a></li>
+                                        @php
+                                        $menu_dep = \App\Models\Departments::where('status', 1)->orderBy('orders',
+                                        'ASC')->get();
+                                        @endphp
+
+                                        @foreach ($menu_dep as $row)
+                                        <li><a href="{{ route('department',$row->slug) }}">{{ $row->title }}</a></li>
+                                        @endforeach
+
                                     </ul>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="{{ config('app.url') }}/service/departments" class="nav-link">Patients Testimonial</a>
+                                    <a href="{{ config('app.url') }}/service/departments" class="nav-link">Patients
+                                        Testimonial</a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Patients Videos</a></li>
                                         <li><a href="{{ route('patients-feedback') }}">Patients Feedback</a></li>
@@ -151,25 +157,26 @@
                 <div class="mobile-menu">
                     <nav id="dropdown">
                         <ul class="navbar-nav">
-                                <li><a href="{{ route('home') }}" class="nav-link">Home</a></li>
-                                <li><a href="{{ route('about-prabha') }}" class="nav-link">About Prabha</a></li>
-                                        <li><a href="{{ route('about-doctor') }}" class="nav-link">About Doctors</a></li>
-                                        <li><a href="{{ route('director-desk') }}" class="nav-link">Director's Desk</a></li>
-                                <li><a href="{{ route('our-surgeries') }}" class="nav-link">Our Surgeries</a></li>
-                                {{-- <li><a href="{{ config('app.url') }}/service/international-patient" class="nav-link">International patients</a></li> --}}
-                                <li><a href="{{ config('app.url') }}" class="nav-link">Facilities</a></li>
-                                <li><a href="{{ config('app.url') }}/contact" class="nav-link">Contact</a></li>
-                                {{-- <li><a href="{{ config('app.url') }}/gallery" class="nav-link">Gallery</a></li> --}}
-                                <!--<li><a href="blog.html" class="nav-link">Blog</a>-->
-                                <!--	<ul>-->
-                                <!--		<li><a href="blog.html">Blog</a></li>-->
-                                <!--		<li><a href="blog-single.html">Blog Single</a></li>-->
-                                <!--	</ul>-->
-                                <!--</li>	-->
-                            </ul>
-                        </nav>
-                    </div>
-              </div>
+                            <li><a href="{{ route('home') }}" class="nav-link">Home</a></li>
+                            <li><a href="{{ route('about-prabha') }}" class="nav-link">About Prabha</a></li>
+                            <li><a href="{{ route('about-doctor') }}" class="nav-link">About Doctors</a></li>
+                            <li><a href="{{ route('director-desk') }}" class="nav-link">Director's Desk</a></li>
+                            <li><a href="{{ route('our-surgeries') }}" class="nav-link">Our Surgeries</a></li>
+                            {{-- <li><a href="{{ config('app.url') }}/service/international-patient"
+                                    class="nav-link">International patients</a></li> --}}
+                            <li><a href="{{ config('app.url') }}" class="nav-link">Facilities</a></li>
+                            <li><a href="{{ config('app.url') }}/contact" class="nav-link">Contact</a></li>
+                            {{-- <li><a href="{{ config('app.url') }}/gallery" class="nav-link">Gallery</a></li> --}}
+                            <!--<li><a href="blog.html" class="nav-link">Blog</a>-->
+                            <!--	<ul>-->
+                            <!--		<li><a href="blog.html">Blog</a></li>-->
+                            <!--		<li><a href="blog-single.html">Blog Single</a></li>-->
+                            <!--	</ul>-->
+                            <!--</li>	-->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
         <!-- MOBILE-MENU-AREA END -->
     </div>

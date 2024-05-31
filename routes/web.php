@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\VisitorsController;
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
 
@@ -18,9 +19,9 @@ use TCG\Voyager\Facades\Voyager;
 Route::get('/', function () {
     return view('visitors.index');
 });
-// Route::get('/about-prabha', function () {
-//     return view('visitors.about');
-// });
+Route::get('/department/{slug}', [VisitorsController::class, 'department'])->name('department');
+Route::view('/appointment', 'visitors.doctors-appointment')->name('doctors-appointment');
+
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 
 Route::view('/home', 'visitors.index')->name('home');
@@ -72,7 +73,7 @@ Route::view('/orthopedics', 'visitors.orthopedics')->name('orthopedics');
 Route::view('/ourdoctors', 'visitors.ourdoctors')->name('ourdoctors');
 Route::view('/patients-feedback', 'visitors.patientfeedback')->name('patients-feedback');
 Route::view('/blogs', 'visitors.blogs')->name('blogs');
-Route::view('/doctors-appointment','visitors.doctors-appointment')->name('doctors-appointment');
+
 
 
 
