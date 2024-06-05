@@ -43,9 +43,9 @@
                 <p>We are specialize in the treatment of the cardiovascular system—which includes the heart and blood vessels. We also educate habits that promote heart health.
                 </p>
 
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                <a href="{{ route('doctors-appointment') }}" class="btn btn-apfm">
                   Book Consultation<i class="icofont icofont-caret-right"></i>
-                </button>
+                </a>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 pr-lg-8 pr-md-8 pr-sm-0 pr-0 mb-lg-0 mb-md-0 mb-sm-5 mb-5">
                 <img src="assets\img\departments\cardology.jpg"

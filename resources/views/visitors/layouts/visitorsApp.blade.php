@@ -34,7 +34,8 @@
         content="{{ $description ??
             'Prabha Hospitals is the leading multispecialty health care unit with advanced facilities
             and qualified & trained nursing staff in all wards having 110 beds including ICU, CCU, PICU, NICU, Emergency, Trauma and BURN Unit.' }}" />
-    <meta property="og:image" content="{{ config('app.url') }}/assets/img/prabhaicon-removebg-preview.png">
+    <meta property="og:image" content="{{ $ogImage ??
+             config('app.url') .'/assets/img/prabhaicon-removebg-preview.png.'}}">
 
 
     @include('visitors.inc.headLinks')

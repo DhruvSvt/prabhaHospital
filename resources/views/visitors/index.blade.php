@@ -28,7 +28,7 @@
     </a>
 </div>
 
-<section id="services" class="section-padding bg-gray">
+{{-- <section id="services" class="section-padding bg-gray">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 text-center mx-auto">
@@ -107,16 +107,92 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
+<style>
+        .Surgeries img {
+    box-shadow: 0 1px 6px 0 rgb(197 197 197 / 26%);
+    background: #fff;
+    border-radius: 10px;
+    width: 139px !important;
+    background: transparent;
+    margin: auto;
+}
+    </style>
+<section id="doctor" class="section-padding bg-gray">
+        <div class="container">
+            <div class="row">
+				<div class="col-lg-7 text-center mx-auto">
+                    <div class="section-title">
+                        <h3>Our<span> Specialities</span></h3>
+                        <span class="line"></span>
 
+                    </div>
+				</div>
+				<!-- end section title -->
+			</div>
+			<div class="row">
+				<div class="team-slider Surgeries owl-carousel owl-theme">
 
+				<div class="col">
+				<a href="{{ route('piles') }}">
+					<div class="img_container flex_box flex_secondary_center flex_primary_center"> <img src="assets/img/icons/piles.svg" alt="Prabha hospital"> </div>
+					<p class="subTitle weighted_font text_font_size ">Piles</p>
+				</a>
+			</div>
+            <div class="col">
+				<a href="{{ route('fissure') }}">
+					<div class="img_container flex_box flex_secondary_center flex_primary_center"> <img src="assets/img/icons/fissure.svg" alt="Prabha hospital"> </div>
+					<p class="subTitle weighted_font text_font_size ">Fissure</p>
+				</a>
+			</div>
+			<div class="col">
+				<a href="{{ route('fistula') }}">
+					<div class="img_container flex_box flex_secondary_center flex_primary_center"> <img src="assets/img/icons/fistula.svg" alt="Prabha hospital"> </div>
+					<p class="subTitle weighted_font text_font_size ">Fistula</p>
+				</a>
+			</div>
+			<div class="col">
+				<a href="{{ route('circumcision') }}">
+					<div class="img_container flex_box flex_secondary_center flex_primary_center"><img src="assets/img/icons/circumcision.svg" alt="Prabha hospital"></div>
+					<p class="subTitle weighted_font text_font_size ">Circumcision</p>
+				</a>
+			</div>
+			<div class="col">
+				<a href="{{ route('varicoseveins') }}">
+					<div class="img_container flex_box flex_secondary_center flex_primary_center"><img src="assets/img/icons/varicose-veins.svg" alt="Prabha hospital"></div>
+					<p class="subTitle weighted_font text_font_size ">Varicose Veins</p>
+				</a>
+			</div>
+			<div class="col">
+				<a href="{{ route('gynecological') }}">
+					<div class="img_container flex_box flex_secondary_center flex_primary_center"><img src="assets/img/icons/gynaecology.svg" alt="Prabha hospital"></div>
+					<p class="subTitle weighted_font text_font_size ">Gynaecology</p>
+				</a>
+			</div>
+			<div class="col">
+				<a href="{{ route('ent') }}">
+					<div class="img_container flex_box flex_secondary_center flex_primary_center"><img src="assets/img/icons/ent.svg" alt="Prabha hospital"></div>
+					<p class="subTitle weighted_font text_font_size ">ENT</p>
+				</a>
+			</div>
+			<div class="col">
+				<a href="{{ route('gallstone') }}">
+					<div class="img_container flex_box flex_secondary_center flex_primary_center"><img src="assets/img/icons/gallstone.svg" alt="Prabha hospital"></div>
+					<p class="subTitle weighted_font text_font_size ">Gallstone</p>
+				</a>
+			</div>
+				</div>
+			</div>
+        </div>
+        <!--- END CONTAINER -->
+    </section>
 
 <section id="about" class="section-padding">
     <div class="auto-container">
         <div class="row">
             <div
                 class="col-lg-7 col-sm-12 col-12 pr-lg-5 pr-md-5 pr-sm-0 pr-0 mb-lg-0 mb-md-0 mb-sm-5 mb-5 about-us-into">
-                <p class="text-center" style="font-size: 30px; margin-bottom:35px;">WHO WE ARE</p>
+
                 <h4 class="mt-1">Why Choose <br>Prabha Healthcare?</h4>
 
                 <p>Prabha Hospital And Trauma Centre( A Unit Of MLP Advance Healthcare Systems Pvt. Ltd.) in no time
@@ -280,180 +356,37 @@
             <div class="row">
                 <div class="col-lg-3 col-md-12 c0l-sm-12 col-xs-12">
                     <ul id="tabsJustified" class="nav nav-tabs ">
+
+                          @foreach ($departments as $row)
                         <li class="nav-item ">
-                            <a href="#" data-target="#one" data-toggle="tab" class="nav-link active">
-                                <h6><i class="icofont icofont-baby"></i> Neonatal & Pediatric </h6>
+                            <a href="{{ route('department',$row->slug) }}" data-target="#{{$row->slug}}" data-toggle="tab" class="nav-link @if ($loop->index==0)
+                                active
+                            @endif">
+                                <h6><i class="icofont icofont-long-arrow-right"></i> {{ $row->title }}</h6>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" data-target="#two" data-toggle="tab" class="nav-link ">
-                                <h6><i class="icofont icofont-capsule"></i> Pediatric Gastro</h6>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" data-target="#three" data-toggle="tab" class="nav-link">
-                                <h6><i class="icofont icofont-operation-theater"></i> Plastic, Cosmetic &
-                                    Reconstructive</h6>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" data-target="#four" data-toggle="tab" class="nav-link">
-                                <h6><i class="icofont icofont-dna-alt-1"></i> Genitourinary </h6>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" data-target="#five" data-toggle="tab" class="nav-link">
-                                <h6><i class="icofont icofont-autism"></i> Orthopedic & Traumatology </h6>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" data-target="#six" data-toggle="tab" class="nav-link">
-                                <h6><i class="icofont icofont-icu"></i> Orunasol laryngology </h6>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" data-target="#seven" data-toggle="tab" class="nav-link">
-                                <h6><i class="icofont icofont-dna"></i> Cancer</h6>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" data-target="#eight" data-toggle="tab" class="nav-link">
-                                <h6><i class="icofont icofont-brain-alt"></i> Brain & Spinal cord</h6>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" data-target="#nine" data-toggle="tab" class="nav-link">
-                                <h6><i class="icofont icofont-tooth"></i> Oral Care</h6>
-                            </a>
-                        </li>
+                        @endforeach
+
                     </ul>
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                     <div id="tabsJustifiedContent" class="tab-content">
-                        <div id="one" class="tab-pane animated fadeInRight active show">
+                        @foreach ($departments as $row)
+                        <div id="{{$row->slug}}" class="tab-pane animated fadeInRight @if ($loop->index==0)
+                                active show
+                            @endif ">
 
-                            <img class="img-fluid mb-5" src="{{ config('app.url') }}/assets/img/neonatal.jpg"
-                                alt="" />
-                            <h5>Neonatal & Pediatric Surgery</h5>
-                            <p> Department-Under this specialized branch 1-day-oldbabies to 14 years old children
-                                are being
-                                operated under the care of super specialist, Dr. Rajesh Gupta (MCH Pediatric
-                                Surgery).Under this branch following
-                                surgeries/procedures are being carried out regularly</p>
-
-                        </div>
-
-
-                        <div id="two" class="tab-pane animated fadeInRight ">
-                            <img class="img-fluid mb-5"
-                                src="{{ config('app.url') }}/assets/img/06_Gastroenterology-min.jpg"
-                                alt="" />
-                            <h5>Pediatric Gastro</h5>
-                            <p> Pediatric Gastro Intestinal surgery, Hepatobiliary Surgery, Paediatric Urology,
-                                Paediatric Thoracic surgery, Paediatric Neuro
-                                surgery, Congenital Malformations, and Paediatric Oncology. We are also doing
-                                Paediatric Endoscopy such as- Oesophagoscopy,
-                                Bronchoscopy Endourology, and Laparoscopy.</p>
-                        </div>
-                        <div id="three" class="tab-pane animated fadeInRight">
-
-                            <h5>Plastic, Cosmetic & Reconstructive Surgery Department</h5>
-                            <p> Plastic, Cosmetic & Reconstructive Surgery Department- In addition to the unit of
-                                Plastic, Cosmetic & Reconstructive surgeries, a
-                                unit of microscopic surgery and a specialized Burn Unit are functioning under the
-                                supervision of super specialized Plastic &
-                                Reconstructive Surgeon. Our Burn unit is fully equipped and is provided in an
-                                isolated space within the same campus.
-                            </p>
-                        </div>
-                        <div id="four" class="tab-pane animated fadeInRight">
-                            <img class="img-fluid mb-5"
-                                src="{{ config('app.url') }}/assets/img/Urology-Genitourinary-Surge-min.jpg"
-                                alt="" />
-                            <h5>Genitourinary Surgery Department</h5>
-                            <p>Genitourinary Surgery Department- This department is functioning under the
-                                supervision of the super specialized genitourinary
-                                surgeon doing all kinds of Endo Urological procedures. Department of Gyn. & Obs This
-                                department is functioning with all updated
-                                facility such as antenatal monitoring, programmed labour as well as painless
-                                delivery etc. Under this department Endoscopic and
-                                Laparoscopic surgeries are being also carried out. We have a team of 4 surgeons.
-                                Besides our own team others also do the
-                                surgeries of their high profile patients. Department also have a separate IUI/IVF
-                                Unit working under the technical guidance of
-                                embryologist</p>
-
-
-                        </div>
-                        <div id="five" class="tab-pane animated fadeInRight">
-                            <img class="img-fluid mb-5"
-                                src="{{ config('app.url') }}/assets/img/orthopaedic-copy-1200x300.jpg"
-                                alt="" />
-                            <h5>Department of Orthopedic & Traumatology</h5>
-                            <p>Department of Orthopedic & Traumatology- Under the close supervision of the
-                                management, department is functioning with
-                                round the clock emergency and causality department to take all kinds of accidents.
-                                We also have the facility of specialized Joint
-                                replacement & minimal invasive orthopedics under the supervision of arthroscopy
-                                surgeon. The department is also having an
-                                image intensifier with close circuit TV monitoring for accurate results.
-                                A specialized physiotherapy unit is also functioning under the guidance of an
-                                orthopedic surgeon.</p>
-
-
-                        </div>
-                        <div id="six" class="tab-pane animated fadeInRight">
-
-                            <h5>Orunasol laryngology</h5>
-                            <p>Orunasol laryngology (ENT Department)- Dr. Ajay Mahajan, Dr. Rajeev Pachauri, and Dr.
-                                Prashant Jain, are carrying out all kinds of ENT
-                                related surgeries regularly. Besides routine surgeries, we have the facility of
-                                operating microscope and endoscopes for advanced
-                                procedures. We also have the facility for hearing aids.</p>
-
+                            <img class="img-fluid mb-5" src="{{ Voyager::image($row->image) }}"
+                                alt="{{ $row->title }}" />
+                            <h5>{{ $row->title }}</h5>
+                            <p> {{ $row->excerpt }}</p>
+                            <a href="{{ route('department',$row->slug) }}" class="blog-home-rmbtn m-2">Read More<i class="icofont icofont-long-arrow-right"></i></a>
 
                         </div>
 
-                        <div id="seven" class="tab-pane animated fadeInRight">
-
-                            <h5>Department of Oncology</h5>
-                            <p>Department of Oncology- Dr. Narendra Deo (M.Ch.), cancer surgeon is doing the cancer
-                                surgery. Under the supervision of Dr. Narendra
-                                Deo we have the facility of chemo therapy also. We also have an in house cancer
-                                physician to look after the post operation
-                                consequences.
-                            </p>
+ @endforeach
 
 
-                        </div>
-                        <div id="eight" class="tab-pane animated fadeInRight">
-
-                            <h5>Neurosurgery</h5>
-                            <p>Neurosurgery- Head injury & spinal trauma, Brain Tumor, Brain Hemorrhage, disc
-                                prolapse, spinal surgery, Brain & Spinal cord disease
-                                etc. are being treated by this unit. Dr. S.K. Gupta (M. Ch.), Neurosurgeon is
-                                heading the department. Besides him other neurosurgeons
-                                are also performing the surgeries at Prabha Hospital. Department also has the in
-                                house support of the neuro physician to deal with head
-                                injuries, we have a good team of specialists for trauma management.
-                            </p>
-
-
-                        </div>
-                        <div id="nine" class="tab-pane animated fadeInRight">
-                            <img class="img-fluid mb-5"
-                                src="{{ config('app.url') }}/assets/img/oral-health-care-thumb.jpg"
-                                alt="" />
-                            <h5>Oral & Dental Care Unit</h5>
-                            <p>Oral & Dental Care Unit- A specialized dental unit is being managed for all kinds of
-                                the dental surgeries, oral & cosmetic care, and
-                                implantation. We have a team of implantologist, Oral & Dental Surgeon and Dental &
-                                Cosmetic Surgeon unit is having all modern
-                                equipment’s and programmed dental chair, department also has the dental X-ray
-                            </p>
-
-
-                        </div>
                     </div>
                 </div>
             </div>
@@ -475,122 +408,33 @@
             <!-- end section title -->
         </div>
         <div class="row mt-4">
-            <div class="service-slider owl-carousel owl-theme">
-                <div class="single-service-item">
-                    <div class="box-doc">
-                        <div class="doc-profile">
-                            <div class="docProfile-img">
-                                <img class="doc-img lazyload"
-                                    src="{{ config('app.url') }}/assets/img/male-doctor-removebg-preview.png"
-                                    alt="Dr B.K. Singh">
-                            </div>
-                            <div class="docProfile-name">
-                                <h3>Dr B.K. Singh</h3>
-                                <p>Chairman - Anesthesiologist (MD, MBBS)</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="service-slider related_doc_widget owl-carousel owl-theme">
 
-                </div>
-                <div class="single-service-item">
-                    <div class="box-doc">
-                        <div class="doc-profile">
-                            <div class="docProfile-img">
-                                <img class="doc-img lazyload"
-                                    src="{{ config('app.url') }}/assets/img/male-doctor-removebg-preview.png"
-                                    alt="Dr B.K. Singh">
-                            </div>
-                            <div class="docProfile-name">
-                                <h3>Dr Priyank Kumar Singh </h3>
-                                <p>Critical Care (MD, MBBS)</p>
-                            </div>
-                        </div>
-                    </div>
+                   @foreach ($doctors as $row)
+                                    <div class="item">
+                                        <div class="blog-singleRecpost">
+                                            <img class="img-fluid" src="{{ Voyager::image($row->image) }}"
+                                                alt="{{ $row->name }}">
+                                            <h5 class="blog-recTitle">
+                                                <a href="{{route('doctor',$row->slug)}}">{{ $row->name }}</a>
+                                            </h5>
+                                            <a href="{{route('doctors_cat',$row->category->slug)}}">{{$row->category->name}}</a>
+                                            <p><b>Speciality:</b> {{ $row->speciality }}<br><b>Experience:</b> {{ $row->experience }}</p>
+                                            <div class="d-flex mb-2"><a href="{{route('doctor',$row->slug)}}"
+                                                    class="btn blog-home-rmbtn m-0 mr-">View
+                                                    Profile <i class="icofont icofont-long-arrow-right"></i></a>
+                                                <a href="{{route('doctors-appointment')}}" class="btn btn-primary">Book Appointment</a>
+                                            </div>
+                                        </div>
 
-                </div>
-                <div class="single-service-item">
-                    <div class="box-doc">
-                        <div class="doc-profile">
-                            <div class="docProfile-img">
-                                <img class="doc-img lazyload"
-                                    src="{{ config('app.url') }}/assets/img/male-doctor-removebg-preview.png"
-                                    alt="Dr B.K. Singh">
-                            </div>
-                            <div class="docProfile-name">
-                                <h3>Dr U.C. Arora </h3>
-                                <p>Nephrologist (MD, DNB, DM) </p>
-                            </div>
-                        </div>
-                    </div>
+                                    </div>
 
-                </div>
-                <div class="single-service-item">
-                    <div class="box-doc">
-                        <div class="doc-profile">
-                            <div class="docProfile-img">
-                                <img class="doc-img lazyload"
-                                    src="{{ config('app.url') }}/assets/img/male-doctor-removebg-preview.png"
-                                    alt="Dr B.K. Singh">
-                            </div>
-                            <div class="docProfile-name">
-                                <h3>Dr S.K. Gupta </h3>
-                                <p>Neuro surgeon (M.ch)</p>
-                            </div>
-                        </div>
-                    </div>
+                                    @endforeach
 
-                </div>
-                <div class="single-service-item">
-                    <div class="box-doc">
-                        <div class="doc-profile">
-                            <div class="docProfile-img">
-                                <img class="doc-img lazyload"
-                                    src="{{ config('app.url') }}/assets/img/male-doctor-removebg-preview.png"
-                                    alt="Dr B.K. Singh">
-                            </div>
-                            <div class="docProfile-name">
-                                <h3>.Dr Kartikey Sharma </h3>
-                                <p>Orthopedic (MS) </p>
-                            </div>
-                        </div>
-                    </div>
 
-                </div>
-                <div class="single-service-item">
-                    <div class="box-doc">
-                        <div class="doc-profile">
-                            <div class="docProfile-img">
-                                <img class="doc-img lazyload"
-                                    src="{{ config('app.url') }}/assets/img/male-doctor-removebg-preview.png"
-                                    alt="Dr B.K. Singh">
-                            </div>
-                            <div class="docProfile-name">
-                                <h3>Dr Premashish Majumdar </h3>
-                                <p>(MD, DM) Neonatologist</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="single-service-item">
-                    <div class="box-doc">
-                        <div class="doc-profile">
-                            <div class="docProfile-img">
-                                <img class="doc-img lazyload"
-                                    src="{{ config('app.url') }}/assets/img/female-doctor-removebg-preview.png"
-                                    alt="Dr B.K. Singh">
-                            </div>
-                            <div class="docProfile-name">
-                                <h3>Dr Shalini Sharma</h3>
-                                <p>MBBS, MD & DM Gastrology</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
 
             </div>
-            <a href="{{ route('ourdoctors') }}" class="blog-home-rmbtn m-2">View all <i
+            <a href="{{ route('doctors') }}" class="blog-home-rmbtn m-2">View all <i
                     class="icofont icofont-long-arrow-right"></i></a>
         </div>
     </div>
@@ -615,65 +459,26 @@
         </div>
         <div class="row text-center ">
             <div class="portfolio-slider owl-carousel owl-theme">
-                <div class="single-gallery-item">
-                    <div class="single-gallery single-gallery-first">
-                        <img class="img-fluid" src="{{ config('app.url') }}/assets/img/Emergency-min.png"
-                            alt="" />
-                        <div class="single-gallery">
-                            <div class="single-gallery-inner">
-                                <h5>Emergency</h5>
 
-                                <a href="{{ config('app.url') }}/assets/img/Emergency-min.png"
-                                    class="venobox info" data-title="Emergency" data-gall="gall1"><i
+                @foreach ($data as $row)
+            <div class="single-gallery-item">
+                    <div class="single-gallery single-gallery-first">
+                        <img class="img-fluid" src="{{ Voyager::image($row->image) }}"
+                            alt="" />
+                        <div class="single-gallery">
+                            <div class="single-gallery-inner">
+                                <a href="{{ Voyager::image($row->image) }}"
+                                    class="venobox info" data-title="" data-gall="gall1"><i
                                         class="icofont icofont-expand"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+            @endforeach
+
+
                 <!-- end single portfolio -->
-                <div class="single-gallery-item">
-                    <div class="single-gallery single-gallery-first">
-                        <img class="img-fluid" src="{{ config('app.url') }}/assets/img/ICU-min.png"
-                            alt="" />
-                        <div class="single-gallery">
-                            <div class="single-gallery-inner">
-                                <h5>ICU</h5>
-                                <a href="{{ config('app.url') }}/assets/img/ICU-min.png" class="venobox info"
-                                    data-title="ICU" data-gall="gall1"><i class="icofont icofont-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end single portfolio -->
-                <div class="single-gallery-item">
-                    <div class="single-gallery single-gallery-first">
-                        <img class="img-fluid" src="{{ config('app.url') }}/assets/img/pharmacy-min.png"
-                            alt="" />
-                        <div class="single-gallery">
-                            <div class="single-gallery-inner">
-                                <h5>Pharmacy</h5>
-                                <a href="{{ config('app.url') }}/assets/img/pharmacy-min.png"
-                                    class="venobox info" data-title="Pharmacy" data-gall="gall1"><i
-                                        class="icofont icofont-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end single portfolio -->
-                <div class="single-gallery-item">
-                    <div class="single-gallery single-gallery-first">
-                        <img class="img-fluid" src="{{ config('app.url') }}/assets/img/nicu-min.png"
-                            alt="" />
-                        <div class="single-gallery">
-                            <div class="single-gallery-inner">
-                                <h5>NICU</h5>
-                                <a href="{{ config('app.url') }}/assets/img/nicu-min.png" class="venobox info"
-                                    data-title="NICU" data-gall="gall1"><i
-                                        class="icofont icofont-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 
             </div>
         </div>

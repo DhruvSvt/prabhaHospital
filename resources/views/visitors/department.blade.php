@@ -50,18 +50,19 @@
                             <div class="related_doc_widget">
                                 <div class="row">
                                     @foreach ($doctors as $row)
-                                    <div class="col-lg-6">
+                                       <div class="col-lg-6">
                                         <div class="blog-singleRecpost">
                                             <img class="img-fluid" src="{{ Voyager::image($row->image) }}"
                                                 alt="{{ $row->name }}">
                                             <h5 class="blog-recTitle">
-                                                <a href="#">{{ $row->name }}</a>
+                                                <a href="{{route('doctor',$row->slug)}}">{{ $row->name }}</a>
                                             </h5>
-                                            <p>{{ $row->speciality }}<br>Experience: {{ $row->experience }}</p>
-                                            <div class="d-flex mb-2"><a href="#"
+                                            <a href="{{route('doctors_cat',$row->category->slug)}}">{{$row->category->name}}</a>
+                                            <p><b>Speciality:</b> {{ $row->speciality }}<br><b>Experience:</b> {{ $row->experience }}</p>
+                                            <div class="d-flex mb-2"><a href="{{route('doctor',$row->slug)}}"
                                                     class="btn blog-home-rmbtn m-0 mr-">View
                                                     Profile <i class="icofont icofont-long-arrow-right"></i></a>
-                                                <a href="#" class="btn btn-primary">Book Appointment</a>
+                                                <a href="{{route('doctors-appointment')}}" class="btn btn-primary">Book Appointment</a>
                                             </div>
                                         </div>
 

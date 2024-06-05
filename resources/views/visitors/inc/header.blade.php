@@ -28,6 +28,7 @@
             </div>
         </div>
     </div>
+
     <!-- END TOP AREA -->
     <!-- START LOGO AREA -->
     <div class="logo-area">
@@ -35,7 +36,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-7 ">
                     <div class="logo mb-0">
-                        <a href="{{ route('home') }}">
+                        <a href="{{ route('index') }}">
                             <img class="img-fluid1" src="{{ config('app.url') }}/assets/img/logo/logo.png"
                                 alt="Prabha Hospital">
                         </a>
@@ -75,7 +76,7 @@
                     <div class="col-lg-12 d-lg-block d-md-none d-sm-none d-none ">
                         <nav class="navbar navbar-expand-lg justify-content-left">
                             <ul class="navbar-nav">
-                                <li><a href="{{ route('home') }}" class="nav-link">Home</a></li>
+                                <li><a href="{{ route('index') }}" class="nav-link">Home</a></li>
                                 <li class="dropdown">
                                     <a href="#0" class="nav-link">About</a>
                                     <ul class="dropdown-menu">
@@ -84,11 +85,11 @@
                                         <li><a href="{{ route('director-desk') }}">Director's Desk</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="{{ route('gallery') }}" class="nav-link">Gallery</a></li>
+
                                 <li class="dropdown">
                                     <a href="{{ config('app.url') }}/service/departments" class="nav-link">Doctors</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="{{ route('ourdoctors') }}">Our Doctors</a></li>
+                                        <li><a href="{{ route('doctors') }}">Our Doctors</a></li>
                                         <li><a href="{{ route('doctors-appointment') }}">Doctors Appointment</a></li>
                                         {{-- <li><a href="{{ route('gastroenterology') }}">Protect from COVID-19</a>
                                         </li> --}}
@@ -118,19 +119,15 @@
 
                                     </ul>
                                 </li>
-                                <li class="dropdown">
-                                    <a href="{{ config('app.url') }}/service/departments" class="nav-link">Patients
-                                        Testimonial</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Patients Videos</a></li>
-                                        <li><a href="{{ route('patients-feedback') }}">Patients Feedback</a></li>
-                                    </ul>
-                                </li>
-                                &nbsp;
+                                <li><a href="{{ route('gallery') }}" class="nav-link">Gallery</a></li>
+                                <li><a href="{{ route('patients-feedback') }}" class="nav-link">Patients
+                                        Testimonial</a></li>
 
-                                <li><a href="{{ route('contact') }}" class="nav-link">Contact</a></li>
+
+
                                 <li><a href="{{ route('blogs') }}" class="nav-link">Blogs</a></li>
-                                {{-- <li><a href="#" class="nav-link">FAQ</a></li> --}}
+                                <li><a href="{{ route('faqs') }}" class="nav-link">Faq's</a></li>
+                                <li><a href="{{ route('contact') }}" class="nav-link">Contact</a></li>
 
 
                                 <!--<li class="dropdown"><a href="services.html" class="nav-link">Services</a>-->

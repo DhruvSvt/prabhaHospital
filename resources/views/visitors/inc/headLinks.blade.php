@@ -20,23 +20,5 @@
 <link rel="stylesheet" href="{{ config('app.url') }}/assets/css/style.css?v=1712303806">
 <!-- Responsive  CSS -->
 <link rel="stylesheet" href="{{ config('app.url') }}/assets/css/responsive.css">
-<!--Google Fonts - Raleway Added By Yashvardhan 17/1/2022-->
-
-<link rel="stylesheet" href="{{ config('app.url') }}/assets/css/piles-cause.css?v=1712303806">
-<link rel="stylesheet" href="{{ config('app.url') }}/assets/css/doctor-profile.css?v=1712303806">
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: 'Poppins', sans-serif;
-         !important
-    }
-</style>

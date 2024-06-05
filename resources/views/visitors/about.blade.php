@@ -1,4 +1,4 @@
-@extends('visitors.layouts.visitorsApp',['title' => 'ABOUT-PRABHA'])
+@extends('visitors.layouts.visitorsApp',['title' => 'About'])
 @section('content')
 
 <section class="section-padding bg-color">

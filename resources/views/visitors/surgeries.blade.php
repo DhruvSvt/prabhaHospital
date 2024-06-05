@@ -107,7 +107,7 @@
 				</a>
 			</div>
 			<div class="col">
-				<a href="{{ route('kidneystones') }}">
+				<a href="{{ route('hernia') }}">
 					<div class="img_container flex_box flex_secondary_center flex_primary_center"><img src="assets/img/icons/hernia.svg" alt="Prabha hospital"></div>
 					<p class="subTitle weighted_font text_font_size ">Hernia</p>
 				</a>

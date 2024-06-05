@@ -50,9 +50,9 @@
                     Pristyn Care for highly experienced ENT Doctors.
                 </p>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                    Book Consultation<i class="icofont icofont-caret-right"></i>
-                </button>
+               <a href="{{ route('doctors-appointment') }}" style="    line-height: 2;max-width: 323px;" class="btn btn-apfm">
+                  Book Consultation<i class="icofont icofont-caret-right"></i>
+                </a>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 pr-lg-8 pr-md-8 pr-sm-0 pr-0 mb-lg-0 mb-md-0 mb-sm-5 mb-5">
                 <img src="assets/img/Homepage-Rectangle-5-ENT.jpg">

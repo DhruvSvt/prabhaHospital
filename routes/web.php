@@ -16,15 +16,23 @@ use TCG\Voyager\Facades\Voyager;
 |
 */
 
-Route::get('/', function () {
-    return view('visitors.index');
-});
+
+Route::get('/', [VisitorsController::class, 'index'])->name('index');
+Route::get('/home', [VisitorsController::class, 'index'])->name('home');
 Route::get('/department/{slug}', [VisitorsController::class, 'department'])->name('department');
-Route::view('/appointment', 'visitors.doctors-appointment')->name('doctors-appointment');
+Route::get('/doctor/{slug}', [VisitorsController::class, 'doctor'])->name('doctor');
+Route::get('/doctors', [VisitorsController::class, 'doctors'])->name('doctors');
+Route::get('/doctors/{slug}', [VisitorsController::class, 'doctors_cat'])->name('doctors_cat');
+Route::get('/appointment', [VisitorsController::class, 'appointment'])->name('doctors-appointment');
+Route::get('/patients-feedback', [VisitorsController::class, 'patientfeedback'])->name('patients-feedback');
+Route::get('/blogs', [VisitorsController::class, 'blogs'])->name('blogs');
+Route::get('/blog/{slug}', [VisitorsController::class, 'blog'])->name('blog');
+Route::view('/faqs', 'visitors.faqs')->name('faqs');
+Route::post('/enquiry-submit', [VisitorsController::class, 'enquiryStore'])->name('enquiry-store');
+Route::post('/appointment-submit', [VisitorsController::class, 'appointmentStore'])->name('appointment-store');
 
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 
-Route::view('/home', 'visitors.index')->name('home');
 Route::view('/about-prabha', 'visitors.about')->name('about-prabha');
 Route::view('/about-doctor', 'visitors.aboutdoctor')->name('about-doctor');
 Route::view('/director-desk', 'visitors.directordesk')->name('director-desk');
@@ -71,8 +79,10 @@ Route::view('/lipoma', 'visitors.lipoma')->name('lipoma');
 Route::view('/liposuction', 'visitors.liposuction')->name('liposuction');
 Route::view('/orthopedics', 'visitors.orthopedics')->name('orthopedics');
 Route::view('/ourdoctors', 'visitors.ourdoctors')->name('ourdoctors');
-Route::view('/patients-feedback', 'visitors.patientfeedback')->name('patients-feedback');
-Route::view('/blogs', 'visitors.blogs')->name('blogs');
+Route::view('/ivftreatement', 'visitors.ivftreatement')->name('ivftreatement');
+Route::view('/hernia', 'visitors.hernia')->name('hernia');
+
+
 
 
 

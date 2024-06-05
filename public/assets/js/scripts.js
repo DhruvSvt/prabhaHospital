@@ -283,7 +283,7 @@ Table Of Contents end
 					items:2
 				},
 				1000:{
-					items:4
+					items:3
 				}
 			}
         });
@@ -303,16 +303,16 @@ Table Of Contents end
 			responsiveClass:true,
 			responsive:{
 				0:{
-					items:1
-				},
-				600:{
-					items:1
-				},
-				768:{
 					items:2
 				},
-				1000:{
+				600:{
+					items:3
+				},
+				768:{
 					items:4
+				},
+				1000:{
+					items:6
 				}
 			}
         });
